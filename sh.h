@@ -848,6 +848,8 @@ im_sorry_dave(void)
 									\
 	memcpy(strdup_dst, strdup_src, strndup_len);			\
 	if (strndup_ln2) {						\
+		while (strndup_len > 1 && strdup_dst[strndup_len - 2U] == '/')	\
+			strndup_len--;									\
 		strdup_dst[strndup_len - 1U] = '/';			\
 		memcpy(strdup_dst + strndup_len, strdup_app,		\
 		    strndup_ln2);					\
