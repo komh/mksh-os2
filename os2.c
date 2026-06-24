@@ -178,7 +178,7 @@ init_extlibpath(void)
 		"LIBPATHSTRICT",
 		NULL
 	};
-	char val[512];
+	char val[1024];
 	int flag;
 
 	for (flag = 0; vars[flag]; flag++) {
